@@ -6,7 +6,7 @@ public class FizzBuzz {
     public static void main(String[] args) {
 
         rangeClosed(1, 100)
-                .mapToObj(element -> element % 3 == 0 ? (element % 5 == 0 ? "seven.FizzBuzz" : "Fizz") : (element % 5 == 0 ? "Buzz" : element))
+                .mapToObj(element -> element % 3 == 0 ? (element % 5 == 0 ? "FizzBuzz" : "Fizz") : (element % 5 == 0 ? "Buzz" : element))
                 .forEach(System.out::println);
     }
 }
