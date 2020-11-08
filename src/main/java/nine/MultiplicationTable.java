@@ -6,12 +6,12 @@ import static java.util.stream.IntStream.rangeClosed;
 public class MultiplicationTable {
     public static void main(String[] args) {
 
-        firstSolutionNestedForLoop();
+        computeMultiplicationTableNestedForLoop();
 
-        secondSolutionNestedStream();
+        computeMultiplicationTableNestedStream();
     }
 
-    private static void secondSolutionNestedStream() {
+    private static void computeMultiplicationTableNestedStream() {
         System.out.println("\nSecond solution:\n");
         rangeClosed(1, 10)
                 .forEach(firstElement -> {
@@ -25,7 +25,7 @@ public class MultiplicationTable {
                 });
     }
 
-    private static void firstSolutionNestedForLoop() {
+    private static void computeMultiplicationTableNestedForLoop() {
         System.out.println("First solution:");
         for (int i = 1; i <= 10; ++i) {
             for (int j = 1; j <= 10; ++j) {
