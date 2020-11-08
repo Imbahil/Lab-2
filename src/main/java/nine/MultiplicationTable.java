@@ -1,17 +1,37 @@
 package nine;
 
+import static java.lang.String.format;
+import static java.util.stream.IntStream.rangeClosed;
+
 public class MultiplicationTable {
     public static void main(String[] args) {
 
+        firstSolutionNestedForLoop();
+
+        secondSolutionNestedStream();
+    }
+
+    private static void secondSolutionNestedStream() {
+        System.out.println("\nSecond solution:\n");
+        rangeClosed(1, 10)
+                .forEach(firstElement -> {
+                    rangeClosed(1, 10)
+                            .forEach(secondElement -> {
+                                int multi = firstElement * secondElement;
+                                System.out.print(format(" %d", multi));
+                                System.out.print(multi < 10 ? "  " : " ");
+                            });
+                    System.out.println();
+                });
+    }
+
+    private static void firstSolutionNestedForLoop() {
+        System.out.println("First solution:");
         for (int i = 1; i <= 10; ++i) {
             for (int j = 1; j <= 10; ++j) {
                 int multi = i * j;
                 System.out.print(" " + multi);
-                if (multi < 10) {
-                    System.out.print("  ");
-                } else if (multi < 100) {
-                    System.out.print(" ");
-                }
+                System.out.print(multi < 10 ? "  " : " ");
             }
             System.out.println();
         }
