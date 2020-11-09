@@ -6,7 +6,7 @@ import java.util.Set;
 import static java.time.DayOfWeek.*;
 import static java.time.LocalDate.of;
 
-class Scratch {
+public class November {
     public static void main(String[] args) {
         var startDate = of(2018, 11, 1);
         var endDate = of(2018, 12, 1);
